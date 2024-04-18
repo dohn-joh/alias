@@ -1,0 +1,464 @@
+presets:
+  mx_min_spaced:
+    capx: 15.5
+    capy: 15.5
+    capthumbx: 17.8
+    capthumby: 16.5
+    kx: 18 # jcmkk3 uses 16.5. i'm choosing to use choc x spacing
+    ky: 16.5
+    kcx: kx # spacing for custom thumb keycaps
+    kcy: ky # spacing for custom thumb keycaps
+    inner_spread: 0.9kx
+    pinky_splay: 5
+    ring_splay: 3
+    thumb_offsetx: 0.75kx
+    switch_xy: 14
+
+  mx_spaced: # y -0.5mm
+    capx: 17.85
+    capy: 18
+    capthumbx: 17
+    capthumby: 16.15
+    capleverx: 15.83
+    caplevery: 15.87
+    kx: 19
+    ky: 18.5
+    inner_spread: kx-0.5
+    pinky_splay: 5
+    ring_splay: 2.5
+    thumb_offsetx: 0.25kx
+    switch_xy_mx: 14 # switch hole
+    switch_xy_choc: 13.8
+
+units:
+  $extends: presets.mx_spaced
+  angle: 22 # was 27.5
+  sf: 19.151 # may want to change this for fab
+  # mcu dimensions (from Nicell himself)
+  mcux: 18
+  mcuy: 33.4
+  # joycon battery dimensions with a little tolerance
+  bcx: 24.5+0.7
+  bcy: 52+0.7
+  # reset switch dimensions
+  rsx: 4.7
+  rsy: 3.5
+  rsh: 0.75 # hole diameter
+  rsd: 2.75 # distance between holes
+  # screw hole diameter (M2)
+  # screw head diameter ~3.3
+  # M2 nut height ~1.5
+  scd: 2.2
+
+points:
+  zones:
+    matrix:
+      anchor:
+        # Fix placement on KiCAD sheet.
+        shift: [100, -100]
+        rotate: -angle + pinky_splay + ring_splay
+      key:
+        width: capx
+        height: capy
+        padding: ky
+        spread: kx
+        autobind: 0
+      mirror:
+        ref: matrix_inner_top
+        shift: [0.5kx,0.5ky]
+        distance: 26.5
+      columns:
+        pinky:
+          rows:
+            top:
+              bind: [0, 0.5kx, 0.5ky, 0]
+            home:
+              bind: [0.5ky, 0.5kx, 0, 0]
+            bottom:
+              bind: [0.5ky, 0, 0, 0]
+          key:
+            column_net: C0
+        ring:
+          rows:
+            top:
+              bind: [0, 0.5kx, 0.5ky, 0]
+            home:
+              bind: [0.5ky, 0.5kx, 0, 0]
+            bottom:
+              bind: [0.5ky, 0, 0, 0.5kx]
+          key:
+            column_net: C1
+            stagger: 10 # was 10
+            spread: kx+1
+            splay: -pinky_splay
+            origin: [0, -3]
+        middle:
+          rows:
+            home:
+              bind: [0.5ky, 0.5kx, 0, 0]
+            bottom:
+              bind: [0.5ky, 0.5kx, 0, 0.5kx]
+          key:
+            column_net: C2
+            stagger: 3 # was 2
+            spread: kx+1
+            splay: -ring_splay
+        index:
+          rows:
+            top:
+              bind: [0, 0, 0, 0.5kx]
+            home:
+              bind: [0.5ky, 0.5kx, 0, 0]
+            bottom:
+              bind: [0.5ky, 0.5kx, 0, 0]
+          key:
+            column_net: C3
+            stagger: -2
+        inner:
+          rows:
+            top:
+              bind: [0, 0, 0, 0.5kx]
+            home:
+              bind: [0.5ky, 0, 0, 0]
+            bottom:
+              bind: [0.5ky, 0, 0, 0]
+            bottom.mirror:
+              bind: [0.5ky, 0, 0, 0]
+          key:
+            column_net: C4
+            spread: inner_spread
+            stagger: -2
+      rows:
+        bottom:
+          row_net: R2
+        bottom.mirror:
+          row_net: R6
+        home:
+          row_net: R1
+        home.mirror:
+          row_net: R5
+        top:
+          row_net: R0
+        top.mirror:
+          row_net: R4
+    thumb:
+      anchor:
+        ref: matrix_index_bottom
+        shift: [thumb_offsetx-4.82+3, -30.1+3]
+      key:
+        width: capx
+        height: capy
+        padding: ky
+        spread: kx
+        autobind: 0
+      mirror.$extends: points.zones.matrix.mirror
+      columns:
+        flexion:
+          rows:
+            cluster:
+              bind: [0.5ky, 0, 0, 0]
+          key:
+            splay: -20
+            orient: 47.5
+            shift: [152.1536-148.8676+2.5, -(139.4486-142.9557)] # x was +1.6
+            rotate: -46
+            column_net: C1
+        base:
+          rows:
+            cluster:
+              bind: [0, 0.12kx, 0, 0.2kx]
+          key:
+            splay: 5
+            stagger: 2.5+4 # was +4
+            spread: cx+2.5
+            column_net: C2
+            adjust:
+              orient: angle - pinky_splay - ring_splay + 20 + 3
+              shift: [0.887, -0.4617]
+              rotate: -angle + pinky_splay + ring_splay - 20 - 3
+        extension:
+          rows:
+            cluster:
+              bind: [5.976+2, 0, 0, 38.659+1.5]
+          key:
+            column_net: C3
+            stagger: -4
+      rows:
+        cluster:
+          row_net: R3
+        cluster.mirror:
+          row_net: R7
+    ref_top_center:
+      anchor:
+        aggregate.parts: [matrix_pinky_top, mirror_matrix_pinky_top]
+        shift: [0, 11.668]
+    ref_bottom_center:
+      anchor:
+        aggregate.parts: [thumb_extension_cluster, mirror_thumb_extension_cluster]
+        shift: [0, -12.433]
+    battery:
+      anchor:
+        ref: ref_top_center
+        shift: [0, -mcuy-bcy/2-10]
+    screw_top_left:
+      anchor:
+        ref: matrix_ring_home
+        shift: [-0.55kx, -0.5ky]
+      key.tags: screw_hole
+    screw_mirror_top_left:
+      anchor:
+        ref: mirror_matrix_ring_home
+        shift: [-0.55kx, -0.5ky]
+      key.tags: screw_hole
+    screw_top_right:
+      anchor:
+        ref: matrix_middle_home
+        shift: [-0.55kx, 0]
+      key.tags: screw_hole
+    screw_mirror_top_right:
+      anchor:
+        ref: mirror_matrix_middle_home
+        shift: [-0.55kx, 0]
+      key.tags: screw_hole
+    screw_bottom:
+      anchor:
+        ref: battery
+        shift: [-0.5bcx-3, 0]
+      key.tags: screw_hole
+    screw_mirror_bottom:
+      anchor:
+        ref: battery
+        shift: [0.5bcx+3, 0]
+      key.tags: screw_hole
+outlines:
+  # !!!add fillets at the very end!!! or you will get malformed outline (self-intersecting) errors in kicad
+  _key_outline:
+    - what: rectangle
+      bound: true
+      size: sf
+      where:
+        - /matrix_.*/
+    - what: rectangle
+      bound: true
+      size: sf # change before fab
+      where:
+        - /thumb_.*/
+    - what: rectangle
+      operation: add
+      size: [240, 83.169]
+      where: ref_top_center
+      adjust.shift: [0, -25-16.584]
+    # - what: rectangle
+    #   operation: add
+    #   size: [69.2051, 15.628]
+    #   where: [thumb_extension_cluster]
+    #   adjust:
+    #     orient: 37
+    #     shift: [7.237+23.635, 14.019+0.451]
+    # - what: polygon
+    #   operation: add
+    #   points:
+    #     - ref: matrix_pinky_top
+    #       shift: [-0.5sf, 0.5sf]
+    #     - ref: mirror_matrix_pinky_top
+    #       shift: [-0.5sf, 0.5sf]
+    #     - ref: mirror_matrix_pinky_bottom
+    #       shift: [-0.5switch_xy_mx, -0.5sf]
+    #     - ref: matrix_pinky_bottom
+    #       shift: [-0.5switch_xy_mx, -0.5sf]
+  _center:
+    - what: rectangle
+      where:
+        ref: ref_top_center
+        shift: [0, -9.5-(mcuy+5)/2]
+      size: [73.849, mcuy+5]
+  _center_test: # minimal join between sides for test printing
+    - what: rectangle
+      where:
+        ref: ref_top_center
+        shift: [0, -25]
+      size: [75, 19]
+  _debug_ref_top_center:
+    - what: circle
+      where: ref_top_center
+      radius: .5
+  switch_cutouts:
+    - what: rectangle
+      where: [/matrix_.*/, thumb_base_cluster, mirror_thumb_base_cluster, thumb_extension_cluster, mirror_thumb_extension_cluster]
+      size: switch_xy_mx
+    - what: rectangle
+      where: [thumb_flexion_cluster, mirror_thumb_flexion_cluster]
+      size: switch_xy_choc
+    # - what: rectangle # mcu
+      # where: ref_top_center
+      # adjust.shift: [0, -mcuy/2-1.48]
+      # size: [mcux+2.5, mcuy+2.5]
+  keycaps:
+    - what: rectangle
+      where:
+        - /matrix_.*/
+      size: [capx, capy]
+    - what: rectangle
+      where: [thumb_base_cluster, mirror_thumb_base_cluster, thumb_extension_cluster, mirror_thumb_extension_cluster]
+      size: [capthumbx, capthumby]
+    - what: rectangle
+      where: [thumb_flexion_cluster, mirror_thumb_flexion_cluster]
+      size: [capleverx, caplevery]
+  _battery_cutout:
+    - what: rectangle
+      where: battery
+      size: [bcx, bcy]
+  pcb:
+    - name: _key_outline
+    # - name: _center
+    # - name: _battery_cutout
+    #   operation: subtract
+    # - name: _center_test
+    # - name: _debug_ref_top_center
+    #   operation: stack
+  screws:
+    - what: circle
+      where: /screw_/
+      radius: 0.5scd
+  preview:
+    - name: pcb
+    - name: keycaps
+      operation: stack
+
+pcbs:
+  Monolog:
+    ### commented out outline for edge cuts. using a footprint instead to get desired board shape.
+    outlines:
+      main:
+        outline: pcb
+    footprints:
+      #when creating this footprint, make sure:
+        #fillet is enabled before adding any customizations or curves
+        #make sure to save and import as svg, NOT dxf! this will help avoid malformed outline/self-intersecting errors in kicad
+      # edge_cuts: #when creating this footprint, make sure to save and import as svg, NOT dxf! this will help avoid malformed outline/self-intersecting errors in kicad
+      #   what: edge_cuts
+      #   where: matrix_middle_bottom
+      #   adjust.shift: [11.661, -5.374]
+      # mcu:
+      #   what: promicro
+      #   where: ref_top_center
+      #   adjust:
+      #     shift: [0, -mcuy/2-1.080-0.4-1.5] # goal is 0.4mm (additional 1.5mm if using magnetic adapter and 2.5mm case thickness) from pcb edge so n!n usb is flush with pcb (usb port protrudes 0.1mm)
+      #     rotate: -90
+      #   params:
+      #     orientation: down
+      #     P21: R0
+      #     P20: R1
+      #     P19: R2
+      #     P18: R3
+      #     P15: R4
+      #     P14: R5
+      #     P16: R6
+      #     P10: R7
+      #
+      #     P2: C0
+      #     P3: C1
+      #     P4: C2
+      #     P5: C3
+      #     P6: C4
+      switches:
+        what: switch_choc_v1_v2 # edited version of default footprint, don't try to make reversible
+        where: [/matrix/, /thumb/]
+        params:
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+          reversible: false
+          hotswap: true
+          outer_pad_width_back: 2.4
+          show_keycaps: true
+          keycaps_x: capx
+          keycaps_y: capy
+
+      diodes:
+        what: combo_diode
+        where: [/matrix/, /thumb/]
+        params:
+          side: F
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          include_tht: false
+        adjust:
+          shift: [0, -5]
+          resist: true
+          rotate: 180
+      switch_power:
+        what: infused-kim/switch_power
+        where: ref_top_center
+        adjust:
+          rotate: 90
+          shift: [0, -1.7252]
+        params: 
+          reverse: false
+          from: RAW
+          to: BAT_P
+      switch_power_text:
+        what: infused-kim/text
+        where: ref_top_center
+        params:
+          text: "ON            OFF"
+          reverse: false
+        adjust:
+          shift: [0.24, -1.]
+      switch_reset:
+        what: reset_button
+        where: ref_top_center
+        adjust:
+          shift: [0, -85.394+0.4rsy+0.14981]
+          rotate: 180
+        params:
+          reverse: false
+          include_bosses: true
+          silkscreen: false
+      # batt_connector:
+      #   what: infused-kim/conn_molex_pico_ezmate_1x02
+      #   where: battery
+      #   adjust: 
+      #     shift: [-12, 0.5bcy+5]
+      #     rotate: 0
+      #   params:
+      #     reverse: false
+      #     pad_1: BAT_P
+      #     pad_2: GND
+      # batt_pads:
+      #   what: infused-kim/pads
+      #   where: battery
+      #   adjust:
+      #     shift: [-12, 0.5bcy+5]
+      #     rotate: -27.5
+      #   params:
+      #     reverse: false
+      #     space: 1.25
+      #     net_1: BAT_P
+      #     net_2: GND
+      # batt_icon:
+      #   what: infused-kim/icon_bat
+      #   where: battery
+      #   params:
+      #     reverse: false
+      #     spacing: 1.5
+      #   adjust:
+      #     shift: [-10.4, 0.5bcy+5+3.2]
+      #     rotate: -27.5
+      m2_screws:
+        what: infused-kim/mounting_hole
+        # changed courtyard_offset in mounting_hole.js to 0.47
+        # increases outline to m2 screwhead size (diameter ~3.4mm)
+        # where: screw_hole
+        params:
+          drill: scd
+          outline: 0.13
+      jlcpcb_order_number_text:
+        what: infused-kim/text
+        where: mirror_matrix_pinky_top
+        params:
+          text: JLCJLCJLCJLC
+          reverse: false
+        adjust:
+          # jlc text is off center because the order# is longer than JLCJLCJLCJLC
+          # hide at the top outer corner of the pcb if you want it less likely to be seen
+          shift: [1.5, -0.2ky]
