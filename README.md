@@ -1,8 +1,8 @@
 # Alias
 
-![front](photos/front.jpg | width=250)
-![back](photos/back.jpg | width=250)
-![detail](photos/detail.jpg | width=250)
+![front](photos/front.jpg)
+![back](photos/back.jpg)
+![detail](photos/detail.jpg)
 
 ## Features
 - Custom 3D printed keycaps
