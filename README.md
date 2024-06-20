@@ -22,43 +22,25 @@ At this time, if more compatibility is desired, you'll need to edit the files. I
 
 ## Thanks
 These people and many more helped make this keyboard possible. Yall are legends.
-
+```
 MrZealot
-
 Pseudoku
-
 petejohanson
-
 caksoylar(bravekarma)
-
 jcmmk3
-
 ceoloide
-
 infused-kim
-
 Flatfootfox
-
 sadekbaroudi
-
 zzeneg
-
 joelspadin
-
 wolfwood
-
 claussen
-
 weteor
-
 Geist
-
 rmwphd(atinyzubat)
-
 fish
-
 Araxia
-
 honorless
-
 elkepenin
+```
