@@ -18,7 +18,7 @@ Everything in this repo has been tested. Even so, use these files at your own ri
 - **Status of keycap compatibility**: only keycaps that are <=17.85mm wide and <=18mm deep are supported
 - **Status of bottom case**: cutouts are currently only compatible with choc v2 with the exception of the lever keys, which have cutouts that support both choc v1 and v2
 
-At this time, if more compatibility is desired, you'll need to edit the files. I might make the changes if more people become interested in building.
+I might work on more variants with wider compatibility if more people become interested in building.
 
 ## Thanks
 These people and many more helped make this keyboard possible. Yall are legends.
