@@ -1,4 +1,4 @@
-23241064638848608
+23244509811842427
 1
 EVQPUC02K_front
 
@@ -25,15 +25,15 @@ PCM12SMTR_back
 
 
 0
-14
-6
+7
+3
 1
 PCM12SMTR_front
 
 
 0
-14
-6
+7
+3
 1
 PEC12R-4xxxF-Sxxxx
 
@@ -105,6 +105,13 @@ SE
 0
 0
 1
+SKHLLCA010
+alps SKHLLCA010 DIP pushbutton
+alps tht dip pushbutton SPST
+0
+4
+3
+1
 SOD123_back
 
 
@@ -125,6 +132,13 @@ kailh,choc
 0
 2
 2
+1
+choc_hotswap_cutout
+
+
+0
+0
+0
 1
 choc_left
 
@@ -242,7 +256,7 @@ molex_pico_ezmate_1x02_front
 
 
 0
-8
+4
 3
 1
 nice_nano_v2_expanded_3d

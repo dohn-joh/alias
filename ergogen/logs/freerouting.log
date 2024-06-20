@@ -1,0 +1,144 @@
+2024-05-01 20:30:01.474 [main] INFO  Freerouting v1.9.0 (build-date: 2024-01-20)
+2024-05-01 20:30:02.531 [main] INFO  Opening 'board.dsn'...
+2024-05-01 20:30:02.918 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v1.9.0
+2024-05-01 20:30:03.206 [main] INFO  Opening 'freerouting.rules'...
+2024-05-01 20:30:03.210 [main] WARN  RulesFile.read: design_name not matching at 'BAT_P'
+2024-05-01 20:30:05.027 [Thread-27] INFO  Starting auto-routing...
+2024-05-01 20:30:05.151 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 20:30:48.294 [AWT-EventQueue-0] ERROR Cannot invoke "app.freerouting.geometry.planar.FloatPoint.rotate(double, app.freerouting.geometry.planar.FloatPoint)" because "p_point" is null
+java.lang.NullPointerException: Cannot invoke "app.freerouting.geometry.planar.FloatPoint.rotate(double, app.freerouting.geometry.planar.FloatPoint)" because "p_point" is null
+	at app.freerouting.boardgraphics.CoordinateTransform.board_to_screen(CoordinateTransform.java:82) ~[freerouting-executable.jar:unspecified]
+	at app.freerouting.interactive.InteractiveState.mouse_wheel_moved(InteractiveState.java:90) ~[freerouting-executable.jar:unspecified]
+	at app.freerouting.interactive.BoardHandling.mouse_wheel_moved(BoardHandling.java:721) ~[freerouting-executable.jar:unspecified]
+	at app.freerouting.gui.BoardPanel.lambda$default_init$0(BoardPanel.java:123) ~[freerouting-executable.jar:unspecified]
+	at java.awt.Component.processMouseWheelEvent(Component.java:6714) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6398) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2266) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5001) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4833) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4604) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2310) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2780) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4833) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:747) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:744) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+2024-05-01 20:30:48.926 [Thread-27] INFO  Auto-routing was completed in 43.90 seconds.
+2024-05-01 20:30:49.027 [Thread-27] INFO  Starting route optimization on 1 thread...
+2024-05-01 20:30:51.694 [Thread-27] INFO  Route optimization was completed in 2.67 seconds.
+2024-05-01 20:30:51.701 [Thread-27] INFO  Saving 'test.ses'...
+2024-05-01 20:54:55.068 [main] INFO  Freerouting v1.9.0 (build-date: 2024-01-20)
+2024-05-01 20:54:55.098 [main] INFO  Settings were loaded from freerouting.json
+2024-05-01 21:30:15.513 [main] INFO  Freerouting v1.9.0 (build-date: 2024-01-20)
+2024-05-01 21:30:15.544 [main] INFO  Settings were loaded from freerouting.json
+2024-05-01 21:30:16.560 [main] INFO  Opening 'board.dsn'...
+2024-05-01 21:30:16.918 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v1.9.0
+2024-05-01 21:30:17.260 [main] INFO  Opening 'freerouting.rules'...
+2024-05-01 21:30:17.263 [main] WARN  RulesFile.read: design_name not matching at 'BAT_P'
+2024-05-01 21:30:18.659 [Thread-27] INFO  Starting auto-routing...
+2024-05-01 21:30:18.946 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:18.951 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:18.957 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:18.968 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:18.973 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:18.977 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:18.983 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:18.995 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:19.000 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:19.003 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:19.006 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:19.010 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:19.015 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:30:19.023 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:31:28.262 [Thread-27] INFO  Auto-routing was completed in 1 minute(s) 9.60 seconds.
+2024-05-01 21:31:28.363 [Thread-27] INFO  Starting route optimization on 1 thread...
+2024-05-01 21:31:35.980 [Thread-27] INFO  Route optimization was completed in 7.62 seconds.
+2024-05-01 21:31:35.990 [Thread-27] INFO  Saving 'test.ses'...
+2024-05-01 21:38:23.877 [main] INFO  Freerouting v1.9.0 (build-date: 2024-01-20)
+2024-05-01 21:38:23.908 [main] INFO  Settings were loaded from freerouting.json
+2024-05-01 21:38:24.923 [main] INFO  Opening 'board.dsn'...
+2024-05-01 21:38:25.290 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v1.9.0
+2024-05-01 21:38:25.551 [main] INFO  Opening 'freerouting.rules'...
+2024-05-01 21:38:25.555 [main] WARN  RulesFile.read: design_name not matching at 'BAT_P'
+2024-05-01 21:38:28.282 [Thread-27] INFO  Starting auto-routing...
+2024-05-01 21:38:28.585 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.592 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.598 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.606 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.611 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.616 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.626 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.637 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.640 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.644 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.652 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.657 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.660 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:38:28.667 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-01 21:39:49.434 [Thread-27] INFO  Auto-routing was completed in 1 minute(s) 21.15 seconds.
+2024-05-01 21:39:49.535 [Thread-27] INFO  Starting route optimization on 1 thread...
+2024-05-01 21:39:57.124 [Thread-27] INFO  Route optimization was completed in 7.59 seconds.
+2024-05-01 21:39:57.134 [Thread-27] INFO  Saving 'test.ses'...
+2024-05-02 00:22:06.832 [main] INFO  Freerouting v1.9.0 (build-date: 2024-01-20)
+2024-05-02 00:22:06.863 [main] INFO  Settings were loaded from freerouting.json
+2024-05-02 00:22:07.879 [main] INFO  Opening 'board.dsn'...
+2024-05-02 00:22:08.270 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v1.9.0
+2024-05-02 00:22:08.591 [main] INFO  Opening 'freerouting.rules'...
+2024-05-02 00:22:08.593 [main] WARN  RulesFile.read: design_name not matching at 'BAT_P'
+2024-05-02 00:22:19.277 [main] INFO  Freerouting v1.9.0 (build-date: 2024-01-20)
+2024-05-02 00:22:19.309 [main] INFO  Settings were loaded from freerouting.json
+2024-05-02 00:22:20.323 [main] INFO  Opening 'board.dsn'...
+2024-05-02 00:22:20.567 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v1.9.0
+2024-05-02 00:22:21.037 [main] INFO  Opening 'freerouting.rules'...
+2024-05-02 00:22:21.044 [main] WARN  RulesFile.read: design_name not matching at 'BAT_P'
+2024-05-02 00:22:41.199 [Thread-27] INFO  Starting auto-routing...
+2024-05-02 00:22:41.351 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.503 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.510 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.515 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.535 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.539 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.548 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.555 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.563 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:22:41.567 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-02 00:23:07.326 [Thread-27] INFO  Auto-routing was completed in 26.13 seconds.
+2024-05-02 00:23:07.427 [Thread-27] INFO  Starting route optimization on 1 thread...
+2024-05-02 00:23:15.186 [Thread-27] INFO  Route optimization was completed in 7.76 seconds.
+2024-05-02 00:23:15.197 [Thread-27] INFO  Saving 'test.ses'...
+2024-05-03 20:27:49.792 [main] INFO  Freerouting v1.9.0 (build-date: 2024-01-20)
+2024-05-03 20:27:50.868 [main] INFO  Opening 'board.dsn'...
+2024-05-03 20:27:51.596 [main] INFO  Opening 'freerouting.rules'...
+2024-05-03 20:27:51.599 [main] WARN  RulesFile.read: design_name not matching at 'BAT_P'
+2024-05-03 20:27:53.174 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v1.9.0
+2024-05-03 20:27:54.080 [Thread-27] INFO  Starting auto-routing...
+2024-05-03 20:27:54.390 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.395 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.402 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.408 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.411 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.415 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.423 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.429 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:27:54.433 [Thread-27] WARN  FloatLine: Parameter is null
+2024-05-03 20:28:08.137 [Thread-27] INFO  Auto-routing was completed in 14.06 seconds.
+2024-05-03 20:28:08.238 [Thread-27] INFO  Starting route optimization on 1 thread...
+2024-05-03 20:28:16.238 [Thread-27] INFO  Route optimization was completed in 8.00 seconds.
+2024-05-03 20:28:16.250 [Thread-27] INFO  Saving 'test.ses'...
