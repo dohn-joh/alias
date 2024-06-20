@@ -12,7 +12,7 @@
 - [Wireless dongle](https://github.com/dohn-joh/dongle-zmk)
 - PCB generated in [ergogen](https://github.com/ergogen/ergogen)
 
-## Disclaimer and Compatibility
+## Compatibility/Disclaimer
 Everything in this repo has been tested. Even so, use these files at your own risk. 
 
 - **Status of keycap compatibility**: only keycaps that are <=17.85mm wide and <=18mm deep are supported
