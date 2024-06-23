@@ -36,7 +36,6 @@ zzeneg
 joelspadin
 wolfwood
 claussen
-weteor
 Geist
 rmwphd(atinyzubat)
 fish
