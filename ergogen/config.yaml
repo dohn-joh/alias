@@ -416,10 +416,24 @@ outlines:
     - what: circle # cutout for lofree central pin
       where: [/matrix_.*/, /thumb_.*/]
       radius: (4.8/2)+0.4
-  _case_bottom:
-    - name: _key_outline
-    - name: _lofree_center_pin_cutouts
+  _choc_v1_and_v2_compatible_cutouts:
+    - what: circle # cutout for lofree central pin
+      where: [/matrix_.*/, /thumb_.*/]
+      radius: (4.8/2)+0.4
+    - what: circle # cutout for choc v1 stab pins
+      where: [/matrix_.*/, /thumb_.*/]
+      adjust.shift: [5.5, 0]
+      radius: 1
+    - what: circle # cutout for choc v1 stab pins
+      where: [/matrix_.*/, /thumb_.*/]
+      adjust.shift: [-5.5, 0]
+      radius: 1
+  case_bottom:
+    - name: pcb
+    - name: _choc_v1_and_v2_compatible_cutouts
       operation: subtract
+    # - name: _lofree_center_pin_cutouts
+    #   operation: subtract
   preview:
     - name: pcb
     - name: keycaps
@@ -552,10 +566,10 @@ pcbs:
           # hide at the top outer corner of the pcb if you want it less likely to be seen
           shift: [1.5, -0.2ky]
 
-  case_bottom: # use to generate cutouts for bottom case
+  case_bottom: # use to generate HOTSWAP cutouts for bottom case
     outlines:
       main:
-        outline: _case_bottom
+        outline: case_bottom
     footprints:
       hotswap_cutouts:
         what: switch_choc_v1_v2 # placeholder. manually replace in kicad
