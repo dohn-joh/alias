@@ -21,7 +21,7 @@ If you decide to have the pcb fabbed, 1.2mm pcb thickness is recommended. Higher
 
 ## Parts
 |Part: Model#|Link|
-
+|-|-|
 |Microcontroller: Supermini NRF52840 (or nice!nano)||
 |Battery: 301230 with molex pico ezmate connector||
 |Battery connector: molex pico ezmate 1x02||
