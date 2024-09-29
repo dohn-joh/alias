@@ -14,11 +14,23 @@
 
 ## Compatibility/Disclaimer
 Everything in this repo has been tested. Even so, use these files at your own risk. 
+If you decide to have the pcb fabbed, 1.2mm pcb thickness is recommended. Higher thicknesses are still compatible but add height to the case.
 
 - **Status of keycap compatibility**: only keycaps that are <=17.85mm wide and <=18mm deep are supported
-- **Status of bottom case**: cutouts are currently only compatible with choc v2 with the exception of the lever keys, which have cutouts that support both choc v1 and v2
+- **Status of bottom case**: ~~cutouts are currently only compatible with choc v2 with the exception of the lever keys, which have cutouts that support both choc v1 and v2~~ fully compatible with both choc v1 and v2
 
-I might work on more variants with wider compatibility if more people become interested in building.
+## Parts
+|Part: Model#|Link|
+
+|Microcontroller: Supermini NRF52840 (or nice!nano)||
+|Battery: 301230 with molex pico ezmate connector||
+|Battery connector: molex pico ezmate 1x02||
+|Power button: PCM12SMTR||
+|Reset button: SKHLLCA010||
+|Choc v1 or v2 switches x 36||
+|Kailh Choc PG1350 Hot Swap Sockets x 36||
+|Keycaps||
+|Magnetic USB connector (optional): Netdot Gen10||
 
 ## Thanks
 These people and many more helped make this keyboard possible. Yall are legends.

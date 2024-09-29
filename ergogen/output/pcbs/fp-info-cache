@@ -1,4 +1,4 @@
-23772009653521807
+23770400993899851
 1
 EVQPUC02K_front
 
@@ -84,26 +84,12 @@ PG1350_front
 4
 2
 1
-ProMicroSimpleJumper
-
-
-0
-42
-19
-1
 ProMicro_expanded
 Solder-jumper reversible Pro Micro footprint (exposed jumpers)
 promicro ProMicro reversible solder jumper
 0
 146
 24
-1
-SE
-
-
-0
-0
-0
 1
 SKHLLCA010
 alps SKHLLCA010 DIP pushbutton
@@ -329,12 +315,19 @@ power_switch
 14
 6
 1
-profile
+promicro
 
 
 0
+42
+19
+1
+promicro_non_reversible
+
+
 0
-0
+24
+24
 1
 satania
 
